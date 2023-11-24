@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:platform_info/platform_info.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -24,9 +25,9 @@ class _WelcomeState extends State<Welcome> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  const Text("WELCOME USER"),
+                  Text("WELCOME USER", style: TextStyle(fontSize: 16.sp)),
                   const SizedBox(height: 10),
-                  Text("ON ${snapshot.data!.toUpperCase()}"),
+                  Text("ON ${snapshot.data!.toUpperCase()}", style: TextStyle(fontSize: 16.sp)),
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
