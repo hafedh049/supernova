@@ -26,7 +26,7 @@ class _WelcomeState extends State<Welcome> {
                 children: <Widget>[
                   const Text("WELCOME USER"),
                   const SizedBox(height: 10),
-                  Text(snapshot.data!),
+                  Text("ON ${snapshot.data!.toUpperCase()}"),
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
