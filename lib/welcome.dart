@@ -8,11 +8,13 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-  Future<List<String>> _guess() async {}
+  Future<List<String>> _guess() async {
+    return;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: FutureBuilder<List<String>>(
           future: _guess(),
@@ -29,7 +31,7 @@ class _WelcomeState extends State<Welcome> {
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
-              return;
+              return Text(snapshot.error.toString());
             }
           },
         ),
