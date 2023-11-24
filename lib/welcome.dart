@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platform_info/platform_info.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -9,7 +10,7 @@ class Welcome extends StatefulWidget {
 
 class _WelcomeState extends State<Welcome> {
   Future<List<String>> _guess() async {
-    return;
+    return <String>[Platform.I.operatingSystem.name];
   }
 
   @override
