@@ -8,34 +8,30 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-
-  Future<List<String>> _guess()async{
-
-  }
+  Future<List<String>> _guess() async {}
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
         child: FutureBuilder<List<String>>(
-          future: null,
-          builder: (BuildContext context, AsyncSnapshot<> snapshot) {
-            if(snapshot.hasData){
+          future: _guess(),
+          builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
+            if (snapshot.hasData) {
               return Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text("WELCOME USER"),
-                const SizedBox(height: 10),
-                Text(data),
-              ],
-            );
+                mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  const Text("WELCOME USER"),
+                  const SizedBox(height: 10),
+                  Text(snapshot.data!.toString()),
+                ],
+              );
+            } else if (snapshot.connectionState == ConnectionState.waiting) {
+              return;
             }
-            else if(snapshot.connectionState == ConnectionState.waiting){
-              return ;
-            }
-          }
+          },
         ),
       ),
     );
