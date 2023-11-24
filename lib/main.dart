@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supernova/welcome.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +13,8 @@ class Main extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      home: Welcome(),
+      theme: ThemeData.dark(),
     );
   }
 }
