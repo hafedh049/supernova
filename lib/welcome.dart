@@ -9,13 +9,15 @@ class Welcome extends StatefulWidget {
 
 class _WelcomeState extends State<Welcome> {
 
-  
+  Future<List<String>> _guess()async{
+
+  }
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: FutureBuilder<>(
+        child: FutureBuilder<List<String>>(
           future: null,
           builder: (BuildContext context, AsyncSnapshot<> snapshot) {
             if(snapshot.hasData){
