@@ -13,7 +13,13 @@ class _WelcomeState extends State<Welcome> {
     return const Scaffold(
       body: Center(
         child: Column(
-          children: <Widget>[],
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Text("WELCOME USER"),
+            const SizedBox(height: 10),
+          ],
         ),
       ),
     );
