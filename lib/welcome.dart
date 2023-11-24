@@ -31,6 +31,8 @@ class _WelcomeState extends State<Welcome> {
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
+              return const CircularProgressIndicator();
+            } else {
               return Text(snapshot.error.toString());
             }
           },
