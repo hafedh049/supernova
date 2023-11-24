@@ -13,10 +13,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveSizer(
-      builder: (
-        BuildContext context,
-        Orientation orientation,
-      ) {
+      builder: (BuildContext context, Orientation orientation, ScreenType screenType) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           home: const Welcome(),
