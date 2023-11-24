@@ -27,7 +27,7 @@ class _WelcomeState extends State<Welcome> {
               ],
             );
             }
-            else if(){
+            else if(snapshot.connectionState == ConnectionState.waiting){
               return ;
             }
           }
