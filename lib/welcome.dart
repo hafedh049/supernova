@@ -10,7 +10,11 @@ class Welcome extends StatefulWidget {
 
 class _WelcomeState extends State<Welcome> {
   Future<List<String>> _guess() async {
-    return <String>[Platform.I.operatingSystem.name];
+    final Platform platform = Platform.I;
+    return <String>[
+      platform.operatingSystem.name,
+      Platform,
+    ];
   }
 
   @override
