@@ -12,14 +12,20 @@ class _WelcomeState extends State<Welcome> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text("WELCOME USER"),
-            const SizedBox(height: 10),
-          ],
+        child: FutureBuilder<>(
+          future: null,
+          builder: (context, snapshot) {
+            return Column(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Text("WELCOME USER"),
+                const SizedBox(height: 10),
+                Text(data),
+              ],
+            );
+          }
         ),
       ),
     );
