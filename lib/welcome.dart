@@ -13,8 +13,7 @@ class _WelcomeState extends State<Welcome> {
     final Platform platform = Platform.I;
     return <String>[
       platform.operatingSystem.name,
-      platform.locale,
-      platform.buildMode.name,
+      platform.type.name,
     ];
   }
 
