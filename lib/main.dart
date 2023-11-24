@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/welcome.dart';
 
 void main() {
@@ -11,6 +12,16 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Size
+    return ResponsiveSizer(
+      builder: (
+        BuildContext context,
+      ) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: const Welcome(),
+          theme: ThemeData.dark(),
+        );
+      },
+    );
   }
 }
