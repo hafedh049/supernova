@@ -14,8 +14,9 @@ class _WelcomeState extends State<Welcome> {
       body: Center(
         child: FutureBuilder<>(
           future: null,
-          builder: (context, snapshot) {
-            return Column(
+          builder: (BuildContext context, AsyncSnapshot<> snapshot) {
+            if(snapshot.hasData){
+              return Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -25,6 +26,10 @@ class _WelcomeState extends State<Welcome> {
                 Text(data),
               ],
             );
+            }
+            else if(){
+              return 
+            }
           }
         ),
       ),
