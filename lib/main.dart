@@ -15,6 +15,7 @@ class Main extends StatelessWidget {
     return ResponsiveSizer(
       builder: (
         BuildContext context,
+        Orientation orientation,
       ) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
