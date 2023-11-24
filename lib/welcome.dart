@@ -17,7 +17,7 @@ class _WelcomeState extends State<Welcome> {
       body: Center(
         child: FutureBuilder<String>(
           future: _guess(),
-          builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
+          builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
             if (snapshot.hasData) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
@@ -26,7 +26,7 @@ class _WelcomeState extends State<Welcome> {
                 children: <Widget>[
                   const Text("WELCOME USER"),
                   const SizedBox(height: 10),
-                  Text(snapshot.data!.toString()),
+                  Text(snapshot.data!),
                 ],
               );
             } else if (snapshot.connectionState == ConnectionState.waiting) {
