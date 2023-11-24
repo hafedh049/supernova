@@ -9,16 +9,13 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-  Future<List<String>> _guess() async {
-    final Platform platform = Platform.I;
-    return platform.operatingSystem.name;
-  }
+  Future<String> _guess() async => Platform.I.operatingSystem.name;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: FutureBuilder<List<String>>(
+        child: FutureBuilder<String>(
           future: _guess(),
           builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
             if (snapshot.hasData) {
