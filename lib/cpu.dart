@@ -75,7 +75,7 @@ class _MemoryState extends State<CPU> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Text("Available : $_memory MB", style: const TextStyle(fontSize: 13)),
+                    Text("Available : $_clock MHz", style: const TextStyle(fontSize: 13)),
                     const SizedBox(height: 20),
                   ],
                 );
