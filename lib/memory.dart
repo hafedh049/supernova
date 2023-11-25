@@ -46,8 +46,8 @@ class _MemoryState extends State<Memory> {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                const SizedBox(10),
-                Text(data),
+                const SizedBox(height: 10),
+                Text("Available : "),
               ],
             ),
           )
