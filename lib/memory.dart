@@ -77,7 +77,13 @@ class _MemoryState extends State<Memory> {
               children: <Widget>[
                 Icon(Bootstrap.memory, size: 15),
                 const SizedBox(width: 10),
-                Text.rich(TextSpan(children: <TextSpan>[])),
+                Text.rich(
+                  TextSpan(
+                    children: <TextSpan>[
+                      TextSpan(text: "Memory"),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
