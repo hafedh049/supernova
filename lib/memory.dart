@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
-import 'package:system_info2/system_info2.dart' show SysInfo;
+import 'package:system_info2/system_info2.dart';
 
 class Memory extends StatefulWidget {
   const Memory({super.key});
