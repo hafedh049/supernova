@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
+import 'package:system_info2/system_info2.dart' show SysInfo;
+
 class Memory extends StatefulWidget {
   const Memory({super.key});
 
@@ -10,9 +12,7 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
-  Future<double> _memory() async {
-    SysInfo
-  }
+  Future<double> _memory() async {}
 
   @override
   Widget build(BuildContext context) {
