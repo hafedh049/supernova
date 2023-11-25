@@ -65,7 +65,9 @@ class _MemoryState extends State<CPU> {
                         } else if (snapshot.connectionState == ConnectionState.waiting) {
                           return Row(
                             mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[],
+                            children: <Widget>[
+                              Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13)),
+                            ],
                           );
                         } else {
                           return Text(snapshot.error.toString());
