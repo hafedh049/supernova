@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:cpu_reader/cpu_reader.dart';
+import 'package:cpu_reader/cpuinfo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -41,8 +42,8 @@ class _MemoryState extends State<CPU> {
             ),
             child: const Row(
               children: <Widget>[
-                 Icon(Bootstrap.cpu_fill, size: 15),
-                 SizedBox(width: 10),
+                Icon(Bootstrap.cpu_fill, size: 15),
+                SizedBox(width: 10),
                 Text("CPU ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
               ],
             ),
@@ -56,15 +57,21 @@ class _MemoryState extends State<CPU> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    StreamBuilder<puInfo>(stream:CpuReader.cpuStream(1000) , builder: (BuildContext context, AsyncSnapshot<> snapshot){
-                        if(snapshot.hasData){
-return Text("${000} MHz", style: const TextStyle(fontSize: 13));
-                        }else if(snapshot.connectionState == ConnectionState.waiting){
-return Row(mainAxisSize: MainAxisSize.min,children: <Widget>[],);
-                        }else {
+                    StreamBuilder<CpuInfo>(
+                      stream: CpuReader.cpuStream(1000),
+                      builder: (BuildContext context, AsyncSnapshot<CpuInfo> snapshot) {
+                        if (snapshot.hasData) {
+                          return Text("${000} MHz", style: const TextStyle(fontSize: 13));
+                        } else if (snapshot.connectionState == ConnectionState.waiting) {
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[],
+                          );
+                        } else {
                           return Text(snapshot.error.toString());
                         }
-                    },),
+                      },
+                    ),
                     const SizedBox(height: 20),
                   ],
                 );
@@ -75,6 +82,4 @@ return Row(mainAxisSize: MainAxisSize.min,children: <Widget>[],);
       ),
     );
   }
-  
-
 }
