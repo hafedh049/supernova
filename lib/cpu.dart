@@ -56,13 +56,13 @@ class _MemoryState extends State<CPU> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    StreamBuilder(stream:CpuReader.cpuStream(1000) , builder: (BuildContext context, AsyncSnapshot<> snapshot){
+                    StreamBuilder<puInfo>(stream:CpuReader.cpuStream(1000) , builder: (BuildContext context, AsyncSnapshot<> snapshot){
                         if(snapshot.hasData){
 return Text("${000} MHz", style: const TextStyle(fontSize: 13));
                         }else if(snapshot.connectionState == ConnectionState.waiting){
 return Row(mainAxisSize: MainAxisSize.min,children: <Widget>[],);
                         }else {
-
+                          return Text(snapshot.error.toString());
                         }
                     },),
                     const SizedBox(height: 20),
