@@ -82,7 +82,6 @@ class _MemoryState extends State<Memory> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Icon(FontAwesomeIcons.hardDrive)
                 // Image.asset("assets/icons/memory.png", width: 25, height: 25),
               ],
             ),
