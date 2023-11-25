@@ -23,7 +23,7 @@ class _MemoryState extends State<Memory> {
   @override
   void initState() {
     _timer = Timer.periodic(
-      2.seconds,
+      1.seconds,
       (Timer timer) {
         if (_memoryKey.currentState != null) {
           for (int index = 0; index < 14; index++) {
