@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
 import 'package:system_info2/system_info2.dart';
@@ -79,8 +78,8 @@ class _MemoryState extends State<Memory> {
                 Text.rich(
                   TextSpan(
                     children: <TextSpan>[
-                      TextSpan(text: "Memory: ", style: TextStyle(fontSize: 11.sp, color: grey, fontWeight: FontWeight.bold)),
-                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB", style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.bold)),
+                      const TextSpan(text: "Memory: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
+                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
