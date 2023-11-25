@@ -18,7 +18,7 @@ class _MemoryState extends State<Memory> {
   late final Timer _timer;
   final GlobalKey<State> _memoryKey = GlobalKey<State>();
   int _memory = 1000;
-  final List<bool> _slots = List<bool>.generate(14, (int index) => false);
+  List<bool> _slots = List<bool>.generate(14, (int index) => false);
 
   @override
   void initState() {
@@ -30,11 +30,8 @@ class _MemoryState extends State<Memory> {
             int totalMemory = SysInfo.getTotalPhysicalMemory();
             int freeMemory = SysInfo.getFreePhysicalMemory();
             int slotMemory = totalMemory ~/ 14;
-
-            _slots = List<bool>.generate(
-              14,
-              (index) => (index * slotMemory <= freeMemory),
-            );
+            _slots.clear();
+            _slots = List<bool>.generate(14, (int index) => (index * slotMemory <= freeMemory));
             _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024));
           }
         }
