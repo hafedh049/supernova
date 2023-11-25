@@ -76,6 +76,7 @@ class _MemoryState extends State<Memory> {
             child: Row(
               children: <Widget>[
                 Icon(Bootstrap.memory, size: 15),
+                const SizedBox(width: 10),
               ],
             ),
           ),
