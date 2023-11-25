@@ -5,6 +5,7 @@ import 'package:cpu_reader/cpuinfo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:lottie/lottie.dart';
 import 'package:supernova/utils/globals.dart';
 
 class CPU extends StatefulWidget {
@@ -66,7 +67,8 @@ class _MemoryState extends State<CPU> {
                           return Row(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-                              const Text(" MHz", style: const TextStyle(fontSize: 13)),
+                              LottieBuilder.asset("assets/"),
+                              const Text(" MHz", style: TextStyle(fontSize: 13)),
                             ],
                           );
                         } else {
