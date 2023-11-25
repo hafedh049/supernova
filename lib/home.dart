@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supernova/cpu.dart';
+import 'package:supernova/display.dart';
 import 'package:supernova/memory.dart';
+import 'package:supernova/storage.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -20,6 +22,8 @@ class Home extends StatelessWidget {
             children: <Widget>[
               Memory(),
               CPU(),
+              Storage(),
+              Display(),
             ],
           ),
         ),

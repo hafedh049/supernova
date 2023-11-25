@@ -8,10 +8,10 @@ class Storage extends StatefulWidget {
   const Storage({super.key});
 
   @override
-  State<Storage> createState() => _MemoryState();
+  State<Storage> createState() => _StorageState();
 }
 
-class _MemoryState extends State<Storage> {
+class _StorageState extends State<Storage> {
   final GlobalKey<State> _storageKey = GlobalKey<State>();
 
   final int _gigaByte = 1024 * 1024 * 1024;

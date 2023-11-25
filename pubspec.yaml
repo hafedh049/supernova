@@ -1,5 +1,5 @@
 name: supernova
-description: "A new Flutter project."
+description: "Android system information application."
 
 publish_to: 'none'
 
@@ -24,6 +24,7 @@ dependencies:
   cpu_reader: ^3.0.0
   fl_chart: ^0.65.0
   storage_info: ^0.0.1
+  dashed_circular_progress_bar: ^0.0.6
 
 dev_dependencies:
   flutter_test:
