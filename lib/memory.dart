@@ -33,7 +33,9 @@ class _MemoryState extends State<Memory> {
         children: <Widget>[
           Container(
             height: 20,
-            decoration: BoxDecoration(color: grey.withOpacity(.5)),
+            decoration: BoxDecoration(
+              color: grey.withOpacity(.5),
+            ),
           ),
         ],
       ),
