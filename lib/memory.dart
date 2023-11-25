@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
@@ -18,7 +19,7 @@ class _MemoryState extends State<Memory> {
 
   @override
   void initState() {
-    _timer = Timer.periodic(2.sec, (timer) { })
+    _timer = Timer.periodic(2.seconds, (Timer timer) {});
     super.initState();
   }
 
