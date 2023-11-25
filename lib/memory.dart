@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
@@ -88,7 +87,7 @@ class _MemoryState extends State<Memory> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
+                    Text("Available : $_memory MB", style: TextStyle(fontSize: 13.sp)),
                     const SizedBox(height: 10),
                     Row(
                       mainAxisSize: MainAxisSize.min,
