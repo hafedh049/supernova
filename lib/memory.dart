@@ -27,7 +27,7 @@ class _MemoryState extends State<Memory> {
       (Timer timer) {
         if (_memoryKey.currentState != null) {
           for (int index = 0; index < 14; index++) {
-            if (index * SysInfo.getTotalPhysicalMemory() <= SysInfo.getFreePhysicalMemory()) {
+            if (index * SysInfo.getTotalPhysicalMemory() ~/ 14 <= SysInfo.getFreePhysicalMemory()) {
             } else {}
           }
           _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024));
