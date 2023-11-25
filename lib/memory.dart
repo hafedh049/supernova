@@ -17,7 +17,7 @@ class Memory extends StatefulWidget {
 class _MemoryState extends State<Memory> {
   late final Timer _timer;
   final GlobalKey<State> _memoryKey = GlobalKey<State>();
-  int _memory = 1024;
+  int _memory = SysInfo.getFreePhysicalMemory();
   List<bool> _slots = List<bool>.generate(14, (int index) => false);
   final int _megaByte = 1024 * 1024;
   final int _gigaByte = 1024 * 1024 * 1024;

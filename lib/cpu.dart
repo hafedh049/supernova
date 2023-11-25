@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
 import 'package:system_info2/system_info2.dart';
@@ -18,6 +17,7 @@ class CPU extends StatefulWidget {
 class _MemoryState extends State<CPU> {
   late final Timer _timer;
   final GlobalKey<State> _cpuKey = GlobalKey<State>();
+  int _clock = 
   List<double> _clocks = <double>[];
   @override
   void initState() {
