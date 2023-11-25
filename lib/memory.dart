@@ -76,9 +76,9 @@ class _MemoryState extends State<Memory> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const SizedBox(height: 10),
-                StreamBuilder<Object>(
-                  stream: null,
-                  builder: (BuildContext context, snapshot) {
+                StatefulBuilder(
+                  key: _memoryKey,
+                  builder: (BuildContext context, void Function(void Function()) _) {
                     return Text("Available : 1024", style: TextStyle(fontSize: 14.sp));
                   },
                 ),
