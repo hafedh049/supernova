@@ -83,7 +83,11 @@ class _MemoryState extends State<Memory> {
                     const SizedBox(height: 10),
                     Row(
                       children: <Widget>[
-                        for (int index = 1; index < 14; index++) ...<Widget>[],
+                        for (int index = 1; index < 14; index++) ...<Widget>[
+                          Container(
+                            decoration: BoxDecoration(shape: BoxShape.circle),
+                          ),
+                        ],
                       ],
                     ),
                   ],
