@@ -12,7 +12,7 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
-  Future<int> _memory() async {
+  Stream<int> _memory() async {
     SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024);
   }
 
