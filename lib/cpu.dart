@@ -14,29 +14,7 @@ class CPU extends StatefulWidget {
 }
 
 class _MemoryState extends State<CPU> {
-  late final Timer _timer;
   final GlobalKey<State> _cpuKey = GlobalKey<State>();
-  int _clock = 0
-  List<double> _clocks = <double>[];
-  @override
-  void initState() {
-    _timer = Timer.periodic(
-      1.seconds,
-      (Timer timer) {CpuReader.cpuStream(1000)},
-    );
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _clocks.clear();
-    _timer.cancel();
-    super.dispose();
-  }
-
-Future<int>    _loadFrequency() async{
-  return 0;
-}
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +56,7 @@ Future<int>    _loadFrequency() async{
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    FutureBuilder(future:_loadFrequency() , builder: (BuildContext context, AsyncSnapshot<> snapshot){
+                    StreamBuilder(stream:_loadFrequency() , builder: (BuildContext context, AsyncSnapshot<> snapshot){
                         if(snapshot.hasData){
 return Text("$_clock MHz", style: const TextStyle(fontSize: 13));
                         }else if(){
