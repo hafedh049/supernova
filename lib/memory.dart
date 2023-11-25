@@ -10,7 +10,9 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
-  Future<double> _memory() async {}
+  Future<double> _memory() async {
+    SysInfo
+  }
 
   @override
   Widget build(BuildContext context) {
