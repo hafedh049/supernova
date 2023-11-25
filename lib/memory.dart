@@ -22,7 +22,7 @@ class _MemoryState extends State<Memory> {
   List<bool> _slots = List<bool>.generate(14, (int index) => false);
   final int _megaByte = 1024 * 1024;
   final int _gegaByte = 1024 * 1024 * 1024;
-
+  final _totalMemory
   @override
   void initState() {
     _timer = Timer.periodic(
@@ -81,6 +81,7 @@ class _MemoryState extends State<Memory> {
                   TextSpan(
                     children: <TextSpan>[
                       TextSpan(text: "Memory "),
+                      TextSpan(text: "${SysInfo.} GB"),
                     ],
                   ),
                 ),
