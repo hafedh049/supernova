@@ -18,6 +18,7 @@ class _MemoryState extends State<Memory> {
   late final Timer _timer;
   final GlobalKey<State> _memoryKey = GlobalKey<State>();
   int _memory = 1000;
+  List<bool> _slots = List<bool>.generate(14, (int index) => false);
 
   @override
   void initState() {
@@ -85,7 +86,7 @@ class _MemoryState extends State<Memory> {
                       children: <Widget>[
                         for (int index = 1; index < 14; index++) ...<Widget>[
                           Container(
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: ),
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: index),
                           ),
                         ],
                       ],
