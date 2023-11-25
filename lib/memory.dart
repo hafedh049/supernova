@@ -71,21 +71,22 @@ class _MemoryState extends State<Memory> {
           ),
           Container(
             padding: const EdgeInsets.all(16),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
+            child: 
                 StatefulBuilder(
                   key: _memoryKey,
                   builder: (BuildContext context, void Function(void Function()) _) {
-                    return;
+                    return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[]);
                   },
                 ),
-              ],
-            ),
+
+
           )
         ],
       ),
     );
   }
 }
+Text("Available : 1024", style: TextStyle(fontSize: 14.sp))
