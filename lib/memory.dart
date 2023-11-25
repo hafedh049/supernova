@@ -47,7 +47,7 @@ class _MemoryState extends State<Memory> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const SizedBox(height: 10),
-                Text("Available : "),
+                Text("Available : 1024"),
               ],
             ),
           )
