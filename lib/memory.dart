@@ -79,7 +79,7 @@ class _MemoryState extends State<Memory> {
                 StatefulBuilder(
                   key: _memoryKey,
                   builder: (BuildContext context, void Function(void Function()) _) {
-                    return Text("Available : 1024", style: TextStyle(fontSize: 14.sp));
+                    return <Widget>[Text("Available : 1024", style: TextStyle(fontSize: 14.sp))];
                   },
                 ),
               ],
