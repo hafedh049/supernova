@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
+import 'package:lottie/lottie.dart';
+import 'package:storage_info/storage_info.dart';
 import 'package:supernova/utils/globals.dart';
-
-import 'package:system_info2/system_info2.dart';
 
 class Storage extends StatefulWidget {
   const Storage({super.key});
@@ -14,7 +14,6 @@ class Storage extends StatefulWidget {
 class _StorageState extends State<Storage> {
   final GlobalKey<State> _storageKey = GlobalKey<State>();
 
-  final int _gigaByte = 1024 * 1024 * 1024;
   final double _totalStorage = 0;
 
   @override
@@ -44,13 +43,28 @@ class _StorageState extends State<Storage> {
               children: <Widget>[
                 const Icon(Bootstrap.memory, size: 15),
                 const SizedBox(width: 10),
-                Text.rich(
-                  TextSpan(
-                    children: <TextSpan>[
-                      const TextSpan(text: "Storage: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
-                      TextSpan(text: "${(_totalStorage ~/ _gigaByte).toInt()} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
-                    ],
-                  ),
+                Row(
+                  children: <Widget>[
+                    FutureBuilder<double>(
+                      future: StorageInfo.getExternalStorageTotalSpaceInGB,
+                      builder: (BuildContext context, AsyncSnapshot<double> snapshot) {
+                        if (snapshot.hasData) {
+                          return Text("${_totalStorage.toStringAsFixed(1)} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold));
+                        } else if (snapshot.connectionState == ConnectionState.waiting) {
+                          return Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              LottieBuilder.asset("assets/wait.json", width: 20, height: 20),
+                              const Text(" GB", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                            ],
+                          );
+                        } else {
+                          return Text(snapshot.error.toString());
+                        }
+                      },
+                    ),
+                    const Text("Storage: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
+                  ],
                 ),
               ],
             ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:supernova/battery.dart';
 import 'package:supernova/cpu.dart';
 import 'package:supernova/display.dart';
 import 'package:supernova/memory.dart';
+import 'package:supernova/network.dart';
 import 'package:supernova/storage.dart';
 
 class Home extends StatelessWidget {
@@ -24,6 +26,8 @@ class Home extends StatelessWidget {
               CPU(),
               Storage(),
               Display(),
+              Network(),
+              Battery(),
             ],
           ),
         ),
