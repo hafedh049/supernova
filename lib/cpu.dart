@@ -74,7 +74,7 @@ class _MemoryState extends State<CPU> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    FutureBuilder(future:_loadFrequency() , builder: (BuildContext context, ){
+                    FutureBuilder(future:_loadFrequency() , builder: (BuildContext context, AsyncSnapshot<> snapshot){
 
                     },),
                     const SizedBox(height: 20),
