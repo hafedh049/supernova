@@ -80,9 +80,8 @@ class _MemoryState extends State<Memory> {
               ),
             ),
             child: Row(
-              mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                // Image.asset("assets/icons/memory.png", width: 25, height: 25),
+                Image.asset("assets/icons/memory.png", width: 25, height: 25),
               ],
             ),
           ),
