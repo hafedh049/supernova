@@ -16,6 +16,7 @@ class Memory extends StatefulWidget {
 
 class _MemoryState extends State<Memory> {
   late final Timer _timer;
+  final GlobalKey<State> _memoryKey = GlobalKey<State>();
 
   @override
   void initState() {
