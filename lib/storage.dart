@@ -65,20 +65,6 @@ class _MemoryState extends State<Storage> {
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[const SizedBox(width: 10),
                       Row(mainAxisSize: MainAxisSize.min,crossAxisAlignment: CrossAxisAlignment.end, children: <Widget>[Text("Available : $_storage", style: const TextStyle(fontSize: 16)),],),
-                      
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          for (bool slot in _slots) ...<Widget>[
-                            Container(
-                              height: 8,
-                              width: 8,
-                              margin: const EdgeInsets.only(right: 4),
-                              decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
-                            ),
-                          ],
-                        ],
-                      ),
                     ],
                   );
                 },
