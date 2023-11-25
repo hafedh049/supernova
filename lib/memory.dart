@@ -23,7 +23,7 @@ class _MemoryState extends State<Memory> {
   @override
   void initState() {
     _timer = Timer.periodic(
-      .1.seconds,
+      1.seconds,
       (Timer timer) {
         if (_memory != SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024)) {
           if (_memoryKey.currentState != null) {
