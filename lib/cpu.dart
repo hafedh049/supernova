@@ -75,7 +75,13 @@ class _MemoryState extends State<CPU> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     FutureBuilder(future:_loadFrequency() , builder: (BuildContext context, AsyncSnapshot<> snapshot){
+                        if(snapshot.hasData){
+return Text("$_clock MHz", style: const TextStyle(fontSize: 13)),
+                        }else if(){
 
+                        }else {
+
+                        }
                     },),
                     const SizedBox(height: 20),
                   ],
