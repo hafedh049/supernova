@@ -12,8 +12,11 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
-  Stream<int> _memory() async {
-    SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024);
+  late final Timer _timer;
+
+  @override
+  void initState() {
+    super.initState();
   }
 
   @override
