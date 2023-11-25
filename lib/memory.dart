@@ -79,8 +79,8 @@ class _MemoryState extends State<Memory> {
                 Text.rich(
                   TextSpan(
                     children: <TextSpan>[
-                      const TextSpan(text: "Memory: "),
-                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB"),
+                      TextSpan(text: "Memory: ", style: TextStyle(fontSize: 11.sp)),
+                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB", style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
