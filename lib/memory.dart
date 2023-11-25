@@ -75,7 +75,7 @@ class _MemoryState extends State<Memory> {
             ),
             child: Row(
               children: <Widget>[
-                Icon(Bootstrap.memory)
+                Icon(FontAwesome.memory)
                 //Image.asset("assets/icons/memory.png", width: 35, height: 35),
               ],
             ),
