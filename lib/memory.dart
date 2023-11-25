@@ -88,7 +88,9 @@ class _MemoryState extends State<Memory> {
                       children: <Widget>[
                         for (int index = 1; index < 14; index++) ...<Widget>[
                           Container(
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: index),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
                           ),
                         ],
                       ],
