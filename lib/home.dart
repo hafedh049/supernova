@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Padding(
-        padding: EdgeInsets.all(48),
+        padding: EdgeInsets.all(24),
         child: Center(
           child: Wrap(
             alignment: WrapAlignment.center,
