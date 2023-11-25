@@ -57,31 +57,32 @@ class _MemoryState extends State<Storage> {
           ),
           Container(
             padding: const EdgeInsets.all(16),
-            child: StatefulBuilder(
-              key: _storageKey,
-              builder: (BuildContext context, void Function(void Function()) _) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Text("Available : $_memory MB", style: const TextStyle(fontSize: 13)),
-                    const SizedBox(height: 20),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        for (bool slot in _slots) ...<Widget>[
-                          Container(
-                            height: 8,
-                            width: 8,
-                            margin: const EdgeInsets.only(right: 4),
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
-                          ),
+            child: Center(
+              child: StatefulBuilder(
+                key: _storageKey,
+                builder: (BuildContext context, void Function(void Function()) _) {
+                  return Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Text("Available : $_memory MB", style: const TextStyle(fontSize: 13)),
+                      const SizedBox(height: 20),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          for (bool slot in _slots) ...<Widget>[
+                            Container(
+                              height: 8,
+                              width: 8,
+                              margin: const EdgeInsets.only(right: 4),
+                              decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
+                            ),
+                          ],
                         ],
-                      ],
-                    ),
-                  ],
-                );
-              },
+                      ),
+                    ],
+                  );
+                },
+              ),
             ),
           ),
         ],
