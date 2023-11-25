@@ -57,11 +57,11 @@ class _MemoryState extends State<CPU> {
                 topRight: Radius.circular(15),
               ),
             ),
-            child: Row(
+            child: const Row(
               children: <Widget>[
-                const Icon(Bootstrap.cpu_fill, size: 15),
-                const SizedBox(width: 10),
-                Text("CPU: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
+                 Icon(Bootstrap.cpu_fill, size: 15),
+                 SizedBox(width: 10),
+                Text("CPU ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -93,4 +93,6 @@ return Row(mainAxisSize: MainAxisSize.min,children: <Widget>[],);
       ),
     );
   }
+  
+
 }
