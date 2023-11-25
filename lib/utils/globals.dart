@@ -4,5 +4,5 @@ import 'package:flutter/material.dart';
 const Color pink = Colors.pinkAccent;
 const Color grey = Colors.grey;
 const Color white = Colors.white;
-const Color blue = Colors.blueAccent;
+const Color blue = Color.fromARGB(255, 68, 211, 255);
 const Color transparent = Colors.transparent;
