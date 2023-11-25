@@ -10,6 +10,8 @@ class Memory extends StatefulWidget {
 class _MemoryState extends State<Memory> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      decoration: BoxDecoration(),
+    );
   }
 }
