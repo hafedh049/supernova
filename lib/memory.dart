@@ -19,20 +19,20 @@ class _MemoryState extends State<Memory> {
   final GlobalKey<State> _memoryKey = GlobalKey<State>();
   int _memory = 1000;
   List<bool> _slots = List<bool>.generate(14, (int index) => false);
-
+  final int _megaByte = 1024 * 1024;
   @override
   void initState() {
     _timer = Timer.periodic(
       1.seconds,
       (Timer timer) {
-        if (_memory != SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024)) {
+        if (_memory != SysInfo.getFreePhysicalMemory() ~/ _megaByte) {
           if (_memoryKey.currentState != null) {
             int totalMemory = SysInfo.getTotalPhysicalMemory();
             int freeMemory = SysInfo.getFreePhysicalMemory();
             int slotMemory = totalMemory ~/ 14;
             _slots.clear();
             _slots = List<bool>.generate(14, (int index) => (index * slotMemory <= freeMemory));
-            _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024));
+            _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ _megaByte);
           }
         }
       },
