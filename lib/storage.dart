@@ -64,7 +64,7 @@ class _MemoryState extends State<Storage> {
                   return Row(
                     mainAxisSize: MainAxisSize.min,
                     children: <Widget>[
-                      Text("Available : $_storage", style: const TextStyle(fontSize: 16)),
+                      Row(crossAxisAlignment: CrossAxisAlignment.end, children: <Widget>[Text("Available : $_storage", style: const TextStyle(fontSize: 16)),],),
                       const SizedBox(height: 20),
                       Row(
                         mainAxisSize: MainAxisSize.min,
