@@ -34,6 +34,8 @@ class _MemoryState extends State<CPU> {
     super.dispose();
   }
 
+    _loadFrequency() {}
+Future
   @override
   Widget build(BuildContext context) {
     return Container(
