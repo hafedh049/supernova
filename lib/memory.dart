@@ -84,7 +84,6 @@ class _MemoryState extends State<Memory> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    const SizedBox(height: 10),
                     Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
                     const SizedBox(height: 10),
                     Row(
