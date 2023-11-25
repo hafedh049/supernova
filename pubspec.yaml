@@ -22,12 +22,12 @@ dependencies:
   battery_plus: ^4.1.0
   icons_plus: ^4.0.0
   fl_chart: ^0.65.0
-  storage_info: ^0.0.1
   dashed_circular_progress_bar: ^0.0.6
   animated_flip_counter: ^0.2.6
   connectivity_plus: ^5.0.2
   better_cpu_reader: ^1.0.1
   flutter_internet_speed_test: ^1.0.1
+  disk_space_plus: ^0.2.3
 
 dev_dependencies:
   flutter_test:

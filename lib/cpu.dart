@@ -1,6 +1,7 @@
 import 'package:better_cpu_reader/cpu_reader.dart';
 import 'package:better_cpu_reader/cpuinfo.dart';
 import 'package:dashed_circular_progress_bar/dashed_circular_progress_bar.dart';
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -66,15 +67,15 @@ class _MemoryState extends State<CPU> {
             child: StatefulBuilder(
               key: _cpuKey,
               builder: (BuildContext context, void Function(void Function()) _) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    StreamBuilder<CpuInfo>(
-                      stream: CpuReader.asStream(1.seconds),
-                      builder: (BuildContext context, AsyncSnapshot<CpuInfo> snapshot) {
-                        if (snapshot.hasData) {
-                          return Row(
+                return StreamBuilder<CpuInfo>(
+                  stream: CpuReader.asStream(1.seconds),
+                  builder: (BuildContext context, AsyncSnapshot<CpuInfo> snapshot) {
+                    if (snapshot.hasData) {
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
@@ -102,22 +103,25 @@ class _MemoryState extends State<CPU> {
                               const SizedBox(width: 150),
                               Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13)),
                             ],
-                          );
-                        } else if (snapshot.connectionState == ConnectionState.waiting) {
-                          return Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              LottieBuilder.asset("assets/wait.json", width: 20, height: 20),
-                              const Text(" MHz", style: TextStyle(fontSize: 13)),
-                            ],
-                          );
-                        } else {
-                          return Text(snapshot.error.toString());
-                        }
-                      },
-                    ),
-                    const SizedBox(height: 20),
-                  ],
+                          ),
+                          const SizedBox(height: 30),
+                          LineChart(
+                            LineChartData(),
+                          ),
+                        ],
+                      );
+                    } else if (snapshot.connectionState == ConnectionState.waiting) {
+                      return Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          LottieBuilder.asset("assets/wait.json", width: 20, height: 20),
+                          const Text(" MHz", style: TextStyle(fontSize: 13)),
+                        ],
+                      );
+                    } else {
+                      return Text(snapshot.error.toString());
+                    }
+                  },
                 );
               },
             ),

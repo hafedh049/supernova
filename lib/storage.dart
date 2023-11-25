@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:lottie/lottie.dart';
-import 'package:storage_info/storage_info.dart';
+import 'package:disk_space_plus/disk_space_plus.dart';
 import 'package:supernova/utils/globals.dart';
 
 class Storage extends StatefulWidget {
@@ -45,9 +45,9 @@ class _StorageState extends State<Storage> {
                 const SizedBox(width: 10),
                 Row(
                   children: <Widget>[
-                    FutureBuilder<double>(
-                      future: StorageInfo.getExternalStorageTotalSpaceInGB,
-                      builder: (BuildContext context, AsyncSnapshot<double> snapshot) {
+                    FutureBuilder<double?>(
+                      future: DiskSpacePlus.getFreeDiskSpace,
+                      builder: (BuildContext context, AsyncSnapshot<double?> snapshot) {
                         if (snapshot.hasData) {
                           return Text("${_totalStorage.toStringAsFixed(1)} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold));
                         } else if (snapshot.connectionState == ConnectionState.waiting) {
