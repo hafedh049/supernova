@@ -108,9 +108,11 @@ class _MemoryState extends State<Memory> {
                                   width: 8,
                                   margin: const EdgeInsets.only(right: 4),
                                   decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
-                                ).animate(
+                                )
+                                  .animate(
                                   onComplete: (AnimationController controller) => controller.repeat(reverse: true),
                                 )
+                                  .shimmer(colors: <Color>[grey.withOpacity(.5)], duration: 2.seconds)
                               : Container(
                                   height: 8,
                                   width: 8,
