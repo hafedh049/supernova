@@ -24,6 +24,9 @@ class _MemoryState extends State<Memory> {
           ),
         ],
       ),
+      child: Column(
+        children: <Widget>[],
+      ),
     );
   }
 }
