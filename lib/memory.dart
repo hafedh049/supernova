@@ -91,7 +91,7 @@ class _MemoryState extends State<Memory> {
               key: _memoryKey,
               builder: (BuildContext context, void Function(void Function()) _) {
                 return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
