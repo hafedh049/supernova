@@ -70,6 +70,7 @@ class _MemoryState extends State<Storage> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: <Widget>[
                           Text(_totalStorage.toStringAsFixed(1), style: const TextStyle(fontSize: 18)),
+                          Text(_totalStorage.toStringAsFixed(1), style: const TextStyle(fontSize: 12)),
                         ],
                       ),
                     ],
