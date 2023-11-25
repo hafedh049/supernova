@@ -60,7 +60,7 @@ class _MemoryState extends State<CPU> {
             ),
             child: Row(
               children: <Widget>[
-                const Icon(Bootstrap.memory, size: 15),
+                const Icon(Bootstrap.cpu_fill, size: 15),
                 const SizedBox(width: 10),
                 Text.rich(
                   TextSpan(

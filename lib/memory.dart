@@ -97,7 +97,7 @@ class _MemoryState extends State<Memory> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text("Available : $_memory MB", style: TextStyle(fontSize: 13.sp)),
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
                     Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
