@@ -15,7 +15,7 @@ class _MemoryState extends State<Storage> {
   final GlobalKey<State> _storageKey = GlobalKey<State>();
 
   final int _gigaByte = 1024 * 1024 * 1024;
-  final int _totalStorage = SysInfo.();
+  final double _totalStorage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -63,8 +63,15 @@ class _MemoryState extends State<Storage> {
                 builder: (BuildContext context, void Function(void Function()) _) {
                   return Row(
                     mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[const SizedBox(width: 10),
-                      Row(mainAxisSize: MainAxisSize.min,crossAxisAlignment: CrossAxisAlignment.end, children: <Widget>[Text("$_totalStorage", style: const TextStyle(fontSize: 16)),],),
+                    children: <Widget>[
+                      const SizedBox(width: 10),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Text("$_totalStorage", style: const TextStyle(fontSize: 16)),
+                        ],
+                      ),
                     ],
                   );
                 },
