@@ -45,7 +45,10 @@ class _MemoryState extends State<Memory> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
-              children: <Widget>[],
+              children: <Widget>[
+                const SizedBox(10),
+                Text(data),
+              ],
             ),
           )
         ],
