@@ -80,7 +80,7 @@ class _MemoryState extends State<Memory> {
                 Text.rich(
                   TextSpan(
                     children: <TextSpan>[
-                      TextSpan(text: "Memory"),
+                      TextSpan(text: "Memory "),
                     ],
                   ),
                 ),
