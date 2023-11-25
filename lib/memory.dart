@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
 class Memory extends StatefulWidget {
@@ -47,7 +48,7 @@ class _MemoryState extends State<Memory> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 const SizedBox(height: 10),
-                Text("Available : 1024"),
+                Text("Available : 1024", style: TextStyle(fontSize: 14.sp)),
               ],
             ),
           )
