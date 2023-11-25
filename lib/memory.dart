@@ -60,9 +60,7 @@ class _MemoryState extends State<Memory> {
           BoxShadow(
             color: grey.withOpacity(.5),
             blurStyle: BlurStyle.outer,
-            blurRadius: 5,
             offset: const Offset(5, 5),
-            spreadRadius: 5,
           ),
         ],
       ),
@@ -91,7 +89,7 @@ class _MemoryState extends State<Memory> {
               key: _memoryKey,
               builder: (BuildContext context, void Function(void Function()) _) {
                 return Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
