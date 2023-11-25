@@ -62,14 +62,7 @@ class _MemoryState extends State<CPU> {
               children: <Widget>[
                 const Icon(Bootstrap.cpu_fill, size: 15),
                 const SizedBox(width: 10),
-                Text.rich(
-                  TextSpan(
-                    children: <TextSpan>[
-                      TextSpan(text: "CPU: ", style: TextStyle(fontSize: 11.sp, color: grey, fontWeight: FontWeight.bold)),
-                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB", style: TextStyle(fontSize: 11.sp, fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                ),
+                Text("CPU: ", style: TextStyle(fontSize: 11.sp, color: grey, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
