@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:supernova/welcome.dart';
+import 'package:supernova/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +16,7 @@ class Main extends StatelessWidget {
       builder: (BuildContext context, Orientation orientation, ScreenType screenType) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const Welcome(),
+          home: const Home(),
           theme: ThemeData.dark(),
         );
       },
