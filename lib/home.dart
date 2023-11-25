@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supernova/cpu.dart';
 import 'package:supernova/memory.dart';
 
 class Home extends StatelessWidget {
@@ -18,6 +19,7 @@ class Home extends StatelessWidget {
             runSpacing: 10,
             children: <Widget>[
               Memory(),
+              CPU(),
             ],
           ),
         ),

@@ -69,7 +69,7 @@ class _MemoryState extends State<CPU> {
           Container(
             padding: const EdgeInsets.all(16),
             child: StatefulBuilder(
-              key: _memoryKey,
+              key: _cpuKey,
               builder: (BuildContext context, void Function(void Function()) _) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
