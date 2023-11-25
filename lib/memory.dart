@@ -17,6 +17,7 @@ class Memory extends StatefulWidget {
 class _MemoryState extends State<Memory> {
   late final Timer _timer;
   final GlobalKey<State> _memoryKey = GlobalKey<State>();
+  int _memory = 1000;
 
   @override
   void initState() {
@@ -24,7 +25,7 @@ class _MemoryState extends State<Memory> {
       2.seconds,
       (Timer timer) {
         if (_memoryKey.currentState != null) {
-          _memoryKey.currentState!.setState(() =>);
+          _memoryKey.currentState!.setState(() =>_memory =   SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024);
         }
       },
     );
