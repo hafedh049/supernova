@@ -10,6 +10,8 @@ class Memory extends StatefulWidget {
 }
 
 class _MemoryState extends State<Memory> {
+  Future<double> _memory() async {}
+
   @override
   Widget build(BuildContext context) {
     return Container(
