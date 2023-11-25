@@ -62,7 +62,7 @@ class _MemoryState extends State<CPU> {
               children: <Widget>[
                 const Icon(Bootstrap.cpu_fill, size: 15),
                 const SizedBox(width: 10),
-                Text("CPU: ", style: TextStyle(fontSize: 11.sp, color: grey, fontWeight: FontWeight.bold)),
+                Text("CPU: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
               ],
             ),
           ),
@@ -76,20 +76,7 @@ class _MemoryState extends State<CPU> {
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Text("Available : $_memory MB", style: TextStyle(fontSize: 13.sp)),
-                    const SizedBox(height: 10),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        for (bool slot in _slots) ...<Widget>[
-                          Container(
-                            height: 8,
-                            width: 8,
-                            margin: const EdgeInsets.only(right: 4),
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
-                          ),
-                        ],
-                      ],
-                    ),
+                    const SizedBox(height: 20),
                   ],
                 );
               },
