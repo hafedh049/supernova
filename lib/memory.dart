@@ -74,13 +74,13 @@ class _MemoryState extends State<Memory> {
             ),
             child: Row(
               children: <Widget>[
-                Icon(Bootstrap.memory, size: 15),
+                const Icon(Bootstrap.memory, size: 15),
                 const SizedBox(width: 10),
                 Text.rich(
                   TextSpan(
                     children: <TextSpan>[
-                      TextSpan(text: "Memory "),
-                      TextSpan(text: "${_totalMemory ~/ _gigaByte} GB"),
+                      const TextSpan(text: "Memory "),
+                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB"),
                     ],
                   ),
                 ),
