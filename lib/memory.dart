@@ -20,6 +20,8 @@ class _MemoryState extends State<Memory> {
   int _memory = 1000;
   List<bool> _slots = List<bool>.generate(14, (int index) => false);
   final int _megaByte = 1024 * 1024;
+  final int _gegaByte = 1024 * 1024 * 1024;
+
   @override
   void initState() {
     _timer = Timer.periodic(
