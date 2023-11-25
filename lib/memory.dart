@@ -79,7 +79,7 @@ class _MemoryState extends State<Memory> {
             ),
             child: Row(
               children: <Widget>[
-                Image.asset("assets/icons/memory.png"),
+                Image.asset("assets/icons/memory.png", width: 10, height: 10),
               ],
             ),
           ),
