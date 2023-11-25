@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cpu_reader/cpu_reader.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
@@ -15,7 +16,7 @@ class CPU extends StatefulWidget {
 class _MemoryState extends State<CPU> {
   late final Timer _timer;
   final GlobalKey<State> _cpuKey = GlobalKey<State>();
-  int _clock = 
+  int _clock = 0
   List<double> _clocks = <double>[];
   @override
   void initState() {
