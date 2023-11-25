@@ -61,7 +61,7 @@ class _MemoryState extends State<CPU> {
                       stream: CpuReader.cpuStream(1000),
                       builder: (BuildContext context, AsyncSnapshot<CpuInfo> snapshot) {
                         if (snapshot.hasData) {
-                          return Text("${000} MHz", style: const TextStyle(fontSize: 13));
+                          return Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13));
                         } else if (snapshot.connectionState == ConnectionState.waiting) {
                           return Row(
                             mainAxisSize: MainAxisSize.min,
