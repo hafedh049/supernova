@@ -20,7 +20,6 @@ dependencies:
   network_info_plus: ^4.1.0
   dart_ipify: ^1.1.1
   battery_plus: ^4.1.0
-  responsive_sizer: ^3.2.0
   icons_plus: ^4.0.0
 
 dev_dependencies:

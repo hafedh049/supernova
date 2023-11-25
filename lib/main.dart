@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/home.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   runApp(const Main());
 }
@@ -12,14 +11,10 @@ class Main extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ResponsiveSizer(
-      builder: (BuildContext context, Orientation orientation, ScreenType screenType) {
-        return MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: const Home(),
-          theme: ThemeData.dark(),
-        );
-      },
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const Home(),
+      theme: ThemeData.dark(),
     );
   }
 }
