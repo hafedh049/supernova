@@ -7,16 +7,19 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: Wrap(
-          alignment: WrapAlignment.center,
-          crossAxisAlignment: WrapCrossAlignment.center,
-          runAlignment: WrapAlignment.center,
-          spacing: 10,
-          runSpacing: 10,
-          children: <Widget>[
-            Memory(),
-          ],
+      body: Padding(
+        padding: EdgeInsets.all(48),
+        child: Center(
+          child: Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            runAlignment: WrapAlignment.center,
+            spacing: 10,
+            runSpacing: 10,
+            children: <Widget>[
+              Memory(),
+            ],
+          ),
         ),
       ),
     );
