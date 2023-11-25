@@ -18,30 +18,19 @@ class CPU extends StatefulWidget {
 class _MemoryState extends State<CPU> {
   late final Timer _timer;
   final GlobalKey<State> _cpuKey = GlobalKey<State>();
-  List<double> _clock = <double>[];
-  final int _totalMemory = SysInfo.getTotalPhysicalMemory();
+  List<double> _clocks = <double>[];
   @override
   void initState() {
     _timer = Timer.periodic(
       1.seconds,
-      (Timer timer) {
-        final int freeMemory = SysInfo.getFreePhysicalMemory();
-        if (_memory != freeMemory ~/ _megaByte) {
-          if (_memoryKey.currentState != null) {
-            final int slotMemory = _totalMemory ~/ 14;
-            _slots.clear();
-            _slots = List<bool>.generate(14, (int index) => (index * slotMemory <= freeMemory));
-            _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ _megaByte);
-          }
-        }
-      },
+      (Timer timer) {},
     );
     super.initState();
   }
 
   @override
   void dispose() {
-    _slots.clear();
+    _clocks.clear();
     _timer.cancel();
     super.dispose();
   }
