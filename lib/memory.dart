@@ -42,6 +42,7 @@ class _MemoryState extends State<Memory> {
 
   @override
   void dispose() {
+    _slots.clear();
     _timer.cancel();
     super.dispose();
   }
