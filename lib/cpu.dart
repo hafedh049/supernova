@@ -58,8 +58,8 @@ class _MemoryState extends State<CPU> {
                   children: <Widget>[
                     StreamBuilder(stream:CpuReader.cpuStream(1000) , builder: (BuildContext context, AsyncSnapshot<> snapshot){
                         if(snapshot.hasData){
-return Text("$000 MHz", style: const TextStyle(fontSize: 13));
-                        }else if(){
+return Text("${000} MHz", style: const TextStyle(fontSize: 13));
+                        }else if(snapshot.connectionState == ConnectionState.waiting){
 return Row(mainAxisSize: MainAxisSize.min,children: <Widget>[],);
                         }else {
 
