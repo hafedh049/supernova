@@ -87,6 +87,7 @@ class _MemoryState extends State<Memory> {
                     Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
                     const SizedBox(height: 10),
                     Row(
+                      mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
                         for (bool slot in _slots) ...<Widget>[
                           Container(
