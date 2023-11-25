@@ -5,8 +5,6 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:supernova/utils/globals.dart';
 
-import 'package:system_info2/system_info2.dart';
-
 class CPU extends StatefulWidget {
   const CPU({super.key});
 
