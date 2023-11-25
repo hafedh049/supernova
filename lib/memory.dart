@@ -92,6 +92,8 @@ class _MemoryState extends State<Memory> {
                       children: <Widget>[
                         for (bool slot in _slots) ...<Widget>[
                           Container(
+                            height: 5,
+                            width: 5,
                             margin: const EdgeInsets.only(right: 4),
                             decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
                           ),
