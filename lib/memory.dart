@@ -31,7 +31,10 @@ class _MemoryState extends State<Memory> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Container(),
+          Container(
+            height: 20,
+            decoration: BoxDecoration(color: grey.withOpacity(.5)),
+          ),
         ],
       ),
     );
