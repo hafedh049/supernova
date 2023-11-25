@@ -70,6 +70,7 @@ class _MemoryState extends State<Memory> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
               color: grey.withOpacity(.1),
               borderRadius: const BorderRadius.only(
@@ -80,7 +81,7 @@ class _MemoryState extends State<Memory> {
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                Image.asset("assets/icons/memory.png", width: 10, height: 10),
+                Image.asset("assets/icons/memory.png", width: 25, height: 25),
               ],
             ),
           ),
