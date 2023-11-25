@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supernova/utils/globals.dart';
 
 class Memory extends StatefulWidget {
   const Memory({super.key});
@@ -13,7 +14,7 @@ class _MemoryState extends State<Memory> {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
-        boxShadow: <BoxShadow>[],
+        boxShadow: <BoxShadow>[BoxShadow(color: grey.withOpacity(.5))],
       ),
     );
   }
