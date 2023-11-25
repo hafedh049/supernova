@@ -57,11 +57,7 @@ class _MemoryState extends State<Memory> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: grey.withOpacity(.5),
-            blurStyle: BlurStyle.outer,
-            offset: const Offset(5, 5),
-          ),
+          BoxShadow(color: grey.withOpacity(.5), blurStyle: BlurStyle.outer, blurRadius: 5),
         ],
       ),
       child: Column(
