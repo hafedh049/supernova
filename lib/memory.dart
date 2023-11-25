@@ -33,7 +33,7 @@ class _MemoryState extends State<Memory> {
           Container(
             height: 20,
             decoration: BoxDecoration(
-              color: grey.withOpacity(.5),
+              color: grey.withOpacity(.1),
               borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(15),
                 topRight: Radius.circular(15),
