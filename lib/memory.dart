@@ -23,7 +23,9 @@ class _MemoryState extends State<Memory> {
     _timer = Timer.periodic(
       2.seconds,
       (Timer timer) {
-        if (_memoryKey.currentState != null) {}
+        if (_memoryKey.currentState != null) {
+          _memoryKey.currentState!.setState(() =>);
+        }
       },
     );
     super.initState();
