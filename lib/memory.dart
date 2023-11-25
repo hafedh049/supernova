@@ -61,14 +61,11 @@ class _MemoryState extends State<Memory> {
           ),
         ],
       ),
-      width: 200,
-      height: 100,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Container(
-            height: 20,
             decoration: BoxDecoration(
               color: grey.withOpacity(.1),
               borderRadius: const BorderRadius.only(
