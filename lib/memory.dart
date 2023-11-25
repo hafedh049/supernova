@@ -112,7 +112,7 @@ class _MemoryState extends State<Memory> {
                                   .animate(
                                   onComplete: (AnimationController controller) => controller.repeat(reverse: true),
                                 )
-                                  .shimmer(colors: <Color>[grey.withOpacity(.5)], duration: 2.seconds)
+                                  .shimmer(colors: <Color>[grey.withOpacity(.5), white.withOpacity(.3)], duration: 2.seconds)
                               : Container(
                                   height: 8,
                                   width: 8,
