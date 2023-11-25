@@ -27,7 +27,7 @@ class _MemoryState extends State<Memory> {
       (Timer timer) {
         if (_memoryKey.currentState != null) {
           for (int index = 0; index < 14; index++) {
-            if (index * (SysInfo.getTotalPhysicalMemory() ~/ 14) <= SysInfo.getFreePhysicalMemory() ~/ 14) {
+            if (index * (SysInfo.getTotalPhysicalMemory() ~/ 14) <= SysInfo.getFreePhysicalMemory()) {
               _slots[index] = true;
             } else {
               _slots[index] = false;
@@ -91,8 +91,8 @@ class _MemoryState extends State<Memory> {
                       children: <Widget>[
                         for (bool slot in _slots) ...<Widget>[
                           Container(
-                            height: 15,
-                            width: 15,
+                            height: 8,
+                            width: 8,
                             margin: const EdgeInsets.only(right: 4),
                             decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
                           ),
