@@ -66,7 +66,7 @@ class _MemoryState extends State<CPU> {
                           return Row(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-                              Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13)),
+                              const Text(" MHz", style: const TextStyle(fontSize: 13)),
                             ],
                           );
                         } else {
