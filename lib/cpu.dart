@@ -22,7 +22,7 @@ class _MemoryState extends State<CPU> {
   void initState() {
     _timer = Timer.periodic(
       1.seconds,
-      (Timer timer) {},
+      (Timer timer) {CpuReader.cpuStream(1000)},
     );
     super.initState();
   }
