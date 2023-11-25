@@ -27,13 +27,13 @@ class _MemoryState extends State<Memory> {
       (Timer timer) {
         if (_memory != SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024)) {
           if (_memoryKey.currentState != null) {
-            for (int index = 0; index < 14; index++) {
-              if (index * (SysInfo.getTotalPhysicalMemory() ~/ 14) <= SysInfo.getFreePhysicalMemory()) {
-                _slots[index] = true;
-              } else {
-                _slots[index] = false;
-              }
-            }
+            int freeMemory = SysInfo.getFreePhysicalMemory();
+            int slotMemory = SysInfo.getTotalPhysicalMemory() ~/ 14;
+
+            List<bool> _slots = List.generate(
+              14,
+              (index) => (index * slotMemory <= freeMemory),
+            );
             _memoryKey.currentState!.setState(() => _memory = SysInfo.getFreePhysicalMemory() ~/ (1024 * 1024));
           }
         }
