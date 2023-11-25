@@ -23,6 +23,7 @@ dependencies:
   icons_plus: ^4.0.0
   cpu_reader: ^3.0.0
   fl_chart: ^0.65.0
+  storage_info: ^0.0.1
 
 dev_dependencies:
   flutter_test:

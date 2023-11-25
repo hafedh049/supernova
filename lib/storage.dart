@@ -1,7 +1,4 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:supernova/utils/globals.dart';
 
@@ -51,7 +48,7 @@ class _MemoryState extends State<Storage> {
                   TextSpan(
                     children: <TextSpan>[
                       const TextSpan(text: "Storage: ", style: TextStyle(fontSize: 11, color: grey, fontWeight: FontWeight.bold)),
-                      TextSpan(text: "${(_totalMemory ~/ _gigaByte).toInt()} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      TextSpan(text: "${(_totalStorage ~/ _gigaByte).toInt()} GB", style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
                     ],
                   ),
                 ),
@@ -61,7 +58,7 @@ class _MemoryState extends State<Storage> {
           Container(
             padding: const EdgeInsets.all(16),
             child: StatefulBuilder(
-              key: _memoryKey,
+              key: _storageKey,
               builder: (BuildContext context, void Function(void Function()) _) {
                 return Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
