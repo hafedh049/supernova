@@ -11,7 +11,10 @@ class _MemoryState extends State<Memory> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(15), boxShadow: Bo),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(15),
+        boxShadow: <BoxShadow>[],
+      ),
     );
   }
 }
