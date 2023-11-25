@@ -20,7 +20,12 @@ class _MemoryState extends State<Memory> {
 
   @override
   void initState() {
-    _timer = Timer.periodic(2.seconds, (Timer timer) {});
+    _timer = Timer.periodic(
+      2.seconds,
+      (Timer timer) {
+        if (_memoryKey.currentState != null) {}
+      },
+    );
     super.initState();
   }
 
