@@ -24,7 +24,10 @@ class _MemoryState extends State<Memory> {
           ),
         ],
       ),
+      padding: const EdgeInsets.all(16),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: <Widget>[],
       ),
     );
