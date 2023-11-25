@@ -94,7 +94,7 @@ class _MemoryState extends State<Memory> {
                           Container(
                             margin: const EdgeInsets.only(right: 4),
                             width: 5,
-                            decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.1)),
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
                           ),
                         ],
                       ],
