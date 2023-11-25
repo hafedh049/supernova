@@ -107,7 +107,7 @@ class _MemoryState extends State<Memory> {
                                   height: 8,
                                   width: 8,
                                   margin: const EdgeInsets.only(right: 4),
-                                  decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
+                                  decoration: const BoxDecoration(shape: BoxShape.circle, color: blue),
                                 )
                                   .animate(
                                   onComplete: (AnimationController controller) => controller.repeat(reverse: true),
@@ -117,7 +117,7 @@ class _MemoryState extends State<Memory> {
                                   height: 8,
                                   width: 8,
                                   margin: const EdgeInsets.only(right: 4),
-                                  decoration: BoxDecoration(shape: BoxShape.circle, color: slot ? blue : grey.withOpacity(.4)),
+                                  decoration: BoxDecoration(shape: BoxShape.circle, color: grey.withOpacity(.4)),
                                 ),
                         ],
                       ],
