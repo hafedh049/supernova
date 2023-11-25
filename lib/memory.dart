@@ -78,7 +78,7 @@ class _MemoryState extends State<Memory> {
               ),
             ),
             child: Row(
-              children: <Widget>[Image.asset("assets")],
+              children: <Widget>[Image.asset("assets/")],
             ),
           ),
           Container(
