@@ -74,7 +74,9 @@ class _MemoryState extends State<CPU> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    Text("$_clock MHz", style: const TextStyle(fontSize: 13)),
+                    FutureBuilder(future:_loadFrequency , builder: (){
+
+                    },),
                     const SizedBox(height: 20),
                   ],
                 );
