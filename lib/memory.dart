@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:supernova/utils/globals.dart';
 
@@ -74,7 +75,7 @@ class _MemoryState extends State<Memory> {
             ),
             child: Row(
               children: <Widget>[
-                Icon()
+                Icon(Bootstrap.cpu)
                 //Image.asset("assets/icons/memory.png", width: 35, height: 35),
               ],
             ),
