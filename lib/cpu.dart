@@ -20,7 +20,7 @@ class _MemoryState extends State<CPU> {
 
   @override
   void initState() {
-    _frequencyNotifier.addListener(() {});
+    //_frequencyNotifier.addListener(() {});
     super.initState();
   }
 
@@ -99,7 +99,7 @@ class _MemoryState extends State<CPU> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(width: 200),
+                              const SizedBox(width: 150),
                               Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13)),
                             ],
                           );

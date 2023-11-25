@@ -1,9 +1,6 @@
-import 'package:better_cpu_reader/cpu_reader.dart';
-import 'package:better_cpu_reader/cpuinfo.dart';
+import 'package:dashed_circular_progress_bar/dashed_circular_progress_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:lottie/lottie.dart';
 import 'package:supernova/utils/globals.dart';
 
 class Battery extends StatefulWidget {
@@ -14,7 +11,13 @@ class Battery extends StatefulWidget {
 }
 
 class _MemoryState extends State<Battery> {
-  final GlobalKey<State> _cpuKey = GlobalKey<State>();
+  final ValueNotifier<double> _batteryNotifier = ValueNotifier<double>(0);
+
+  @override
+  void dispose() {
+    _batteryNotifier.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,35 +52,73 @@ class _MemoryState extends State<Battery> {
           ),
           Container(
             padding: const EdgeInsets.all(16),
-            child: StatefulBuilder(
-              key: _cpuKey,
-              builder: (BuildContext context, void Function(void Function()) _) {
-                return Column(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                DashedCircularProgressBar.aspectRatio(
+                  aspectRatio: 1,
+                  valueNotifier: _batteryNotifier,
+                  progress: 37,
+                  startAngle: 225,
+                  sweepAngle: 270,
+                  foregroundColor: Colors.green,
+                  backgroundColor: grey,
+                  foregroundStrokeWidth: 15,
+                  backgroundStrokeWidth: 15,
+                  animation: true,
+                  seekSize: 6,
+                  seekColor: const Color(0xffeeeeee),
+                  child: ValueListenableBuilder(
+                    valueListenable: _batteryNotifier,
+                    builder: (BuildContext context, double value, Widget? _) => Text(
+                      '${value.toInt()}%',
+                      style: const TextStyle(color: Colors.black, fontWeight: FontWeight.w300, fontSize: 60),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
-                    StreamBuilder<CpuInfo>(
-                      stream: CpuReader.asStream(1.seconds),
-                      builder: (BuildContext context, AsyncSnapshot<CpuInfo> snapshot) {
-                        if (snapshot.hasData) {
-                          return Text("${snapshot.data!.currentFrequencies} MHz", style: const TextStyle(fontSize: 13));
-                        } else if (snapshot.connectionState == ConnectionState.waiting) {
-                          return Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              LottieBuilder.asset("assets/wait.json", width: 20, height: 20),
-                              const Text(" MHz", style: TextStyle(fontSize: 13)),
-                            ],
-                          );
-                        } else {
-                          return Text(snapshot.error.toString());
-                        }
-                      },
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Icon(LineAwesome.dice_d6_solid, size: 15, color: grey),
+                        SizedBox(width: 10),
+                        Text("Good", style: TextStyle(fontSize: 9, color: grey, fontWeight: FontWeight.bold)),
+                      ],
                     ),
-                    const SizedBox(height: 20),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Icon(FontAwesome.cube, size: 15, color: grey),
+                        SizedBox(width: 10),
+                        Text("5000 mAh", style: TextStyle(fontSize: 9, color: grey, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Icon(Bootstrap.sun, size: 15, color: grey),
+                        SizedBox(width: 10),
+                        Text("22°C / 72°F", style: TextStyle(fontSize: 9, color: grey, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                    SizedBox(height: 10),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Icon(Bootstrap.clock, size: 15, color: grey),
+                        SizedBox(width: 10),
+                        Text("00:00", style: TextStyle(fontSize: 9, color: grey, fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                   ],
-                );
-              },
+                ),
+              ],
             ),
           ),
         ],
