@@ -12,7 +12,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  font_awesome_flutter: ^10.6.0
   flutter_animate: ^4.3.0
   platform_info: ^4.0.2
   system_info2: ^4.0.0
@@ -22,6 +21,7 @@ dependencies:
   dart_ipify: ^1.1.1
   battery_plus: ^4.1.0
   responsive_sizer: ^3.2.0
+  icons_plus: ^4.0.0
 
 dev_dependencies:
   flutter_test:
