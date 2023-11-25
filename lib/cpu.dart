@@ -67,7 +67,7 @@ class _MemoryState extends State<CPU> {
                           return Row(
                             mainAxisSize: MainAxisSize.min,
                             children: <Widget>[
-                              LottieBuilder.asset("assets/"),
+                              LottieBuilder.asset("assets/wait.json", width: 20, height: 20),
                               const Text(" MHz", style: TextStyle(fontSize: 13)),
                             ],
                           );
