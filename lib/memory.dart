@@ -27,7 +27,7 @@ class _MemoryState extends State<Memory> {
       (Timer timer) {
         if (_memoryKey.currentState != null) {
           for (int index = 0; index < 14; index++) {
-            if (index * (SysInfo.getTotalPhysicalMemory() ~/ 14) <= SysInfo.getFreePhysicalMemory()) {
+            if (index * (SysInfo.getTotalPhysicalMemory() ~/ 14) <= SysInfo.getFreePhysicalMemory() ~/ 14) {
               _slots[index] = true;
             } else {
               _slots[index] = false;
