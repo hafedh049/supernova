@@ -80,6 +80,7 @@ class _MemoryState extends State<Memory> {
                   children: <Widget>[
                     const SizedBox(height: 10),
                     Text("Available : 1024", style: TextStyle(fontSize: 14.sp)),
+                    const SizedBox(height: 10),
                   ],
                 );
               },
