@@ -75,7 +75,10 @@ class _MemoryState extends State<Memory> {
                 topRight: Radius.circular(15),
               ),
             ),
-            child: ,),
+            child: Row(
+              children: <Widget>[],
+            ),
+          ),
           Container(
             padding: const EdgeInsets.all(16),
             child: StatefulBuilder(
