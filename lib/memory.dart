@@ -81,6 +81,7 @@ class _MemoryState extends State<Memory> {
                     const SizedBox(height: 10),
                     Text("Available : $_memory", style: TextStyle(fontSize: 13.sp)),
                     const SizedBox(height: 10),
+                    Row(children: <Widget>[for(int index = 1 ; index < 14; index++),],),
                   ],
                 );
               },
