@@ -18,20 +18,7 @@ class _MemoryState extends State<Storage> {
   final GlobalKey<State> _storageKey = GlobalKey<State>();
 
   final int _gigaByte = 1024 * 1024 * 1024;
-  final int _totalMemory = SysInfo.getTotalPhysicalMemory();
-  @override
-  void initState() {
-    _timer = Timer.periodic(
-      1.seconds,
-      (Timer timer) {},
-    );
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-  }
+  final int _totalStorage = SysInfo.();
 
   @override
   Widget build(BuildContext context) {
